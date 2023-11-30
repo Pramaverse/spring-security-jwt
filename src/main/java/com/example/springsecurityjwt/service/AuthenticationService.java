@@ -52,7 +52,7 @@ public class AuthenticationService {
             String token = tokenService.generateToken(auth);
             return new LoginResponseDTO(userRepository.findByUsername(username).get(), token);
         } catch (AuthenticationException e) {
-            return new LoginResponseDTO(null, "");
+            return new LoginResponseDTO(null, null);
         }
     }
 
