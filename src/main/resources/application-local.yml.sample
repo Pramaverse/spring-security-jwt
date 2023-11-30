@@ -1,0 +1,6 @@
+# Copy this file and rename it to remove the .sample part of the file name. This new file will be part of .gitignore,
+# but will allow you to set the path to your h2 data folder according to your needs.
+
+spring:
+  datasource:
+    url: jdbc:h2:file:/Path/to/your/data/demo;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE

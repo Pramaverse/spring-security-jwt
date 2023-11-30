@@ -1,0 +1,17 @@
+jwt:
+  private.key: classpath:keys/private.pem
+  public.key: classpath:keys/public.pem
+
+spring:
+  datasource:
+    url: jdbc:h2:file:/data/demo;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+
+  #change dialect to convert JPA queries to platform dependent queries
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+    show-sql: false
+    hibernate.ddl-auto: create-drop
